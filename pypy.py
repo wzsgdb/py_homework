@@ -4,7 +4,7 @@ books ={
     "python入门":"python1",
     "python高手":"python2", 
 }
-#查找书籍
+#查询书籍：根据书名查询对应的作者。
 def get_book_code(book_name):
     if book_name in books:
         print(books[book_name])
@@ -13,7 +13,7 @@ def get_book_code(book_name):
        
        
        
-#add添加书籍
+#添加书籍：将书名和作者添加到字典中
 def add_book(book_name,book_code):
     if book_name not in books:
         books[book_name] = book_code
@@ -23,7 +23,7 @@ def add_book(book_name,book_code):
         
         
         
-#删除书籍
+#删除书籍：根据书名从字典中删除书籍。
 def delete_book(book_name):
     if book_name in books:
         del books[book_name]
@@ -33,7 +33,7 @@ def delete_book(book_name):
     
     
     
-#查找所有书籍
+#列出所有书籍：打印出字典中的所有书籍和作者。
 def print_books():
     print("所有书籍")
     for book_name,book_code in books.items():
