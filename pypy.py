@@ -44,10 +44,22 @@ def print_books():
         
         
 #test测试
-def main():
-    get_book_code("python入门")
-    add_book("python高手","python2")
-    print_books()
-
-
-main()
+switch = {
+    "1":get_book_code,
+    "2":add_book,
+    "3":delete_book,
+    "4":print_books,
+}
+while True:
+    print("1.查询书籍")
+    print("2.添加书籍")
+    print("3.删除书籍")
+    print("4.列出所有书籍")
+    print("5.退出程序")
+    choice = input("请输入选项：")
+    if choice == "5":
+        break
+    if choice in switch:
+        switch[choice]()
+    else:
+        print("输入错误，请重新输入")
